@@ -16,7 +16,7 @@ As you can see `_JAVA_OPTIONS` and `JAVA_TOOL_OPTIONS` are being picked up when 
 `JDK_JAVA_OPTIONS` will **not** be picked up during compile time. When it comes to executing the java application `java`
 picks up all three options. Please notice that you cannot override `_JAVA_OPTIONS` via command line.
 
-````bash
+```shell script
 $ ./run.sh
 Compiling... 
 Picked up JAVA_TOOL_OPTIONS: -D-MY_KEY_2=DEFAULT
@@ -32,12 +32,12 @@ Java app started
 -MY_KEY_2 = OVERIDDEN
 -MY_KEY_3 = OVERIDDEN
 
-````
+```
 
 
 ## Summary / TLDR;
 
-If you want to set options for all java tools ,you should prefer `JAVA_TOOL_OPTIONS` over `_JAVA_OPTIONS` as it can be
+If you want to set options for all java tools, you should prefer `JAVA_TOOL_OPTIONS` over `_JAVA_OPTIONS` as it can be
 overridden via command line. If you only intend to set options for `java`, then you should use `JDK_JAVA_OPTIONS`.
 
 |                     | Picked up by                                 | Overridable |
