@@ -10,5 +10,6 @@ printf "Compiling... \n"
 javac -d ./target src/de/d3ns0n/Main.java && printf "\n"
 
 # run project
-printf "Starting java app \n"
-java -D-MY_KEY_1=OVERIDDEN -D-MY_KEY_2=OVERIDDEN -D-MY_KEY_3=OVERIDDEN -classpath ./target de.d3ns0n.Main
+JAVA_OPTS="-D-MY_KEY_1=OVERRIDDEN -D-MY_KEY_2=OVERRIDDEN -D-MY_KEY_3=OVERRIDDEN"
+printf "Starting java app with: JAVA_OPTS=\"%s\" \n" "${JAVA_OPTS}"
+java $JAVA_OPTS -classpath ./target de.d3ns0n.Main
