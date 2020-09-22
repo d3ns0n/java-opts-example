@@ -16,7 +16,7 @@ As you can see `_JAVA_OPTIONS` and `JAVA_TOOL_OPTIONS` are being picked up when 
 `JDK_JAVA_OPTIONS` will **not** be picked up during compile time. When it comes to executing the java application `java`
 picks up all three options. Please notice that you cannot override `_JAVA_OPTIONS` via command line.
 
-```shell script
+```console
 $ ./run.sh
 Compiling... 
 Picked up JAVA_TOOL_OPTIONS: -D-MY_KEY_2=DEFAULT
